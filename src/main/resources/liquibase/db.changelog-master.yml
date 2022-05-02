@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      runAlways: false
+      id: 20220502_01
+      author: Leontii Polovinko
+      changes:
+        - sqlFile:
+            path: changelog/001_initial_schema.sql
+            encoding: utf8
+            relativeToChangelogFile: true
