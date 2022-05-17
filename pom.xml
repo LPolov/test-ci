@@ -17,7 +17,7 @@
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
-		<java.version>13</java.version>
+		<java.version>11</java.version>
 		<jsonwebtoken.version>0.8.0</jsonwebtoken.version>
 		<jsr310.version>2.9.7</jsr310.version>
 	</properties>
