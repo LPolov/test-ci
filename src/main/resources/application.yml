@@ -17,3 +17,14 @@ spring:
         format_sql: true
       show-sql: true
       open-in-view: false
+  security:
+    user:
+      name: user
+      password: 1234
+      roles: ADMIN
+
+jwt:
+  secretKey: JwtVerySuperMegaSercetKey
+  validity:
+    accessToken: 10m
+    refreshToken: 30d

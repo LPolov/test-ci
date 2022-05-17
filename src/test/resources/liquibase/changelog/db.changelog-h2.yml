@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - changeSet:
+      runAlways: true
+      id: 20220503_01
+      author: Leontii Polovinko
+      changes:
+        - sqlFile:
+            path: changeset/test_001_initial_schema.sql
+            encoding: utf8
+            relativeToChangelogFile: true
+  - changeSet:
+      runAlways: true
+      id: 20220510_02
+      author: Leontii Polovinko
+      changes:
+        - sqlFile:
+            path: changeset/test_002_add_locked_column_to_users.sql
+            encoding: utf8
+            relativeToChangelogFile: true

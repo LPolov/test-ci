@@ -8,3 +8,21 @@ databaseChangeLog:
             path: changelog/001_initial_schema.sql
             encoding: utf8
             relativeToChangelogFile: true
+  - changeSet:
+      runAlways: false
+      id: 20220503_02
+      author: Leontii Polovinko
+      changes:
+        - sqlFile:
+            path: changelog/002_create_default_users.sql
+            encoding: utf8
+            relativeToChangelogFile: true
+  - changeSet:
+      runAlways: false
+      id: 20220503_03
+      author: Leontii Polovinko
+      changes:
+        - sqlFile:
+            path: changelog/003_add_locked_column_to_users.sql
+            encoding: utf8
+            relativeToChangelogFile: true

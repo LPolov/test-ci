@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS user_progress;
 
 CREATE TABLE IF NOT EXISTS users
 (
-    id              VARCHAR(255),
+    id              VARCHAR(255)   NOT NULL,
     email           VARCHAR(255)    NOT NULL,
     enabled         BIT             NOT NULL DEFAULT 0,
     first_name      VARCHAR(50)    NOT NULL,
@@ -17,7 +17,7 @@ ALTER TABLE users ADD CONSTRAINT users_pkey PRIMARY KEY (id);
 
 CREATE TABLE IF NOT EXISTS products
 (
-    id          VARCHAR(255),
+    id          VARCHAR(255)    NOT NULL,
     name        VARCHAR(255)    NOT NULL,
     proteins    DECIMAL(5,1)    NOT NULL,
     fats        DECIMAL(5,1)    NOT NULL,
@@ -28,7 +28,7 @@ ALTER TABLE products ADD CONSTRAINT products_pkey PRIMARY KEY (id);
 
 CREATE TABLE IF NOT EXISTS daily_cuts
 (
-    id          VARCHAR(255),
+    id          VARCHAR(255)    NOT NULL,
     calories    DECIMAL(6,1)    NOT NULL,
     proteins    DECIMAL(5,1)    NOT NULL,
     fats        DECIMAL(5,1)    NOT NULL,
@@ -40,7 +40,7 @@ ALTER TABLE daily_cuts ADD CONSTRAINT daily_cuts_pkey PRIMARY KEY (id);
 
 CREATE TABLE IF NOT EXISTS user_progress
 (
-    id              VARCHAR(255),
+    id              VARCHAR(255)    NOT NULL,
     user_id         VARCHAR(255)    NOT NULL,
     daily_cut_id    VARCHAR(255)    NOT NULL
     );
