@@ -15,7 +15,7 @@ public class AuthenticationController {
 
   private final JwtService jwtService;
 
-  @GetMapping("/refresh-token")
+  @GetMapping("/refresh-tokens")
   public void refreshToken(HttpServletRequest request, HttpServletResponse response) {
     jwtService.refreshToken(request, response);
   }
